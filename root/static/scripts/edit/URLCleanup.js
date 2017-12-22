@@ -1283,7 +1283,7 @@ const CLEANUPS = {
     match: [new RegExp("^(?:https?://)?anison\\.info/", "i")],
     type: LINK_TYPES.otherdatabases,
     clean: function (url) {
-      return url.replace(/^(?:https?:\/\/)?(?:www\.)?anison\.info\/data\/(person|source|song)\/([0-9]+)\.html(?:[\/?&#].*)$/, "http://anison.info/data/$1/$2.html");
+      return url.replace(/^(?:https?:\/\/)?(?:www\.)?anison\.info\/data\/(person|source|song)\/([0-9]+)\.html.*$/, "http://anison.info/data/$1/$2.html");
       },
     validate: function (url, id) {
       var m = /^http:\/\/anison\.info\/data\/(person|source|song)\/([0-9]+)\.html$/.exec(url);
